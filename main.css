@@ -1,0 +1,11 @@
+body {
+    /* background-color: rgb(235, 225, 172); */
+    background-image: url('./img/sky-being-illuminated-by-rays-260nw-2306971213.webp');
+    background-size: cover;
+}
+#firstRow{
+    margin-top: 30px;
+}
+#header{
+    font-size: 60px;
+}
