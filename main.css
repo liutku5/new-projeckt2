@@ -5,7 +5,18 @@ body {
 }
 #firstRow{
     margin-top: 30px;
+    margin-bottom: 20px;
 }
 #header{
     font-size: 60px;
+}
+#text1{
+    margin-bottom: 20px;
+}
+#resultBlock{
+    margin-top: 30px;
+}
+.img{
+    width: 100px;
+    height: 100px;
 }

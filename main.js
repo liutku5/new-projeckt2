@@ -1,8 +1,4 @@
 
-// const d = new Date();
-// let day = d.getFullYear() + "-" + (d.getMonth() + 1).toString().padStart(2, "0") + "-" + d.getDate().toString().padStart(2, "0") + " " + d.getHours().toString().padStart(2, "0") + ":00:00";
-// console.log(day);
-
 
 
 document.querySelector("#submit").addEventListener("click", searchCity)
@@ -23,21 +19,22 @@ function callApi(city) {
 }
 
 const d = new Date();
-let day = d.getFullYear() + "-" + (d.getMonth() + 1).toString().padStart(2, "0") + "-" + d.getDate().toString().padStart(2, "0") + " " + d.getHours().toString().padStart(2, "0") + ":00:00";
-console.log(day);
+let curentTime = d.getFullYear() + "-" + (d.getMonth() + 1).toString().padStart(2, "0") + "-" + d.getDate().toString().padStart(2, "0") + " " + d.getHours().toString().padStart(2, "0") + ":00:00";
+console.log(curentTime);
 
 function printToConsole(data) {
-    let result = 0;
+    let result = -1;
     for (let i = 0; i < data.forecastTimestamps.length; i++) {
-        if (data.forecastTimestamps[i].forecastTimeUtc == day);
+        if (data.forecastTimestamps[i].forecastTimeUtc == curentTime){
         result = i;
         break;
+        }
     }
 
     console.log(data.place.name);
     console.log(data.place.administrativeDivision);
     console.log(data.forecastTimestamps[result]);
-    let output = document.querySelector("#at");
+    let output = document.querySelector("#res");
     let HTML = "";
     let selectData = data.forecastTimestamps[result];
     HTML += displayElemenat("Miestas: " + data.place.name);

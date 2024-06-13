@@ -27,23 +27,27 @@
     </div>
     <div class="row">
         <div class="col-1"></div>
-        <div class="col-7">
-            <h4 class="margin-top 30px">Prašome įvesti norimo miesto pavadinima.</h4>
+        <div class="col-6">
+            <h4 id="text1">Prašome įvesti norimo miesto pavadinima.</h4>
             <form action="" method="get">
                 <input type="text" class="form-control" id="city">
-                <button id="submit" class="btn btn-danger text-center" type="submit">Press ME!</button>
+                <button id="submit" class="btn btn-secondary text-center" type="submit">Press ME!</button>
             </form>
         </div>
-        <div class="col-4"></div>
+        <div class="col-5"></div>
     </div>
-    <div class="row">
-        <div class="col-2"></div>
-        <div class="col-4">
+    <div class="row ">
+        <div class="col-1"></div>
+        <div class="col-4" id="resultBlock">
             <div class="card text-bg-light mb-3" style="max-width: 22rem;">
-                <div class="card-header h2">Orai</div>
+                <div class="card-header h1">
+                    <img src="./img/vecteezy_3d-weather-icon-day-with-rain_24825195.png" alt="" class="img">
+                    Orai
+                    <img src="./img/vecteezy_3d-weather-icon-day-with-rain_24825193.png" alt="" class="img">
+                </div>
                 <div class="card-body">
                     <h5 class="card-title h3">Jūsų pasirinktas mietas</h5>
-                    <div class="card-text" id="at">
+                    <div class="card-text" id="res">
                         <div>Mietas:</div>
                         <div>Administracinis skyrius:</div>
                         <div>Oro temperatūra:</div>
@@ -60,7 +64,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-6"></div>
+        <div class="col-7"></div>
     </div>
 
 </body>
