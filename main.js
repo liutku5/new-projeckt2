@@ -23,13 +23,14 @@ let curentTime = d.getFullYear() + "-" + (d.getMonth() + 1).toString().padStart(
 console.log(curentTime);
 
 function printToConsole(data) {
-    let result = -1;
+    let result = 0;
     for (let i = 0; i < data.forecastTimestamps.length; i++) {
-        if (data.forecastTimestamps[i].forecastTimeUtc == curentTime){
-        result = i;
-        break;
+        if (data.forecastTimestamps[i].forecastTimeUtc == curentTime) {
+            result = i;
+            break;
         }
     }
+
 
     console.log(data.place.name);
     console.log(data.place.administrativeDivision);
@@ -49,15 +50,38 @@ function printToConsole(data) {
     HTML += displayElemenat("Santykinė drėgmė: " + selectData.relativeHumidity);
     HTML += displayElemenat("Bendras kritulių kiekis: " + selectData.totalPrecipitation);
     HTML += displayElemenat("Orų aprašymas: " + selectData.conditionCode);
-   
+
     console.log(HTML);
     output.innerHTML = HTML;
 }
 
 function displayElemenat(val) {
     return "<div>" + val + "</div>";
-    
+
 }
 
 
 
+// function displayElement(val) {
+//     return `
+//       <div className="row">
+//         <div className="col-1"></div>
+//         <div className="col-4">
+//           <div className="card text-bg-light mb-3" style={{ maxWidth: "22rem" }}>
+//             <div className="card-header">
+//               <img src="./img/vecteezy_3d-weather-icon-day-with-rain_24825195.png" alt="Weather icon" />
+//               Orai
+//               <img src="./img/vecteezy_3d-weather-icon-day-with-rain_24825193.png" alt="Weather icon" />
+//             </div>
+//             <div className="card-body">
+//               <h5 className="card-title">Jūsų pasirinktas mietas</h5>
+//               <div className="card-text">
+//                 <div>${val}</div>
+//               </div>
+//             </div>
+//           </div>
+//         </div>
+//         <div className="col-7"></div>
+//       </div>
+//     `;
+// }
